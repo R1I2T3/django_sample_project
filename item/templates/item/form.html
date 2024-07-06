@@ -19,11 +19,20 @@
                 <br>
                 {{ form.price }}
             </div>
-            <div class="mb-3">
-                <label for="password" class="inline-block mb-2">Category</label>
-                <br>
-                {{ form.category }}
-            </div>
+            {% if form.category %}
+                <div class="mb-3">
+                    <label for="password" class="inline-block mb-2">Category</label>
+                    <br>
+                    {{ form.category }}
+                </div>
+            {% endif %}
+            {% if form.is_sold %}
+                <div class="mb-3">
+                    <label for="password" class="inline-block mb-2">Is sold</label>
+                    <br>
+                    {{ form.is_sold }}
+                </div>
+            {% endif %}
             <div class="mb-3">
                 <label for="password" class="inline-block mb-2">Image</label>
                 <br>
